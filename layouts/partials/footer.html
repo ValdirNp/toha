@@ -19,7 +19,7 @@
 <footer class="container-fluid text-center align-content-center footer pb-2">
   <div class="container pt-5">
     <div class="row text-left">
-      <div class="col-md-4 col-sm-12">
+      <div class="col-md-6 col-sm-12">
         <h5>{{ i18n "navigation" }}</h5>
         {{ if $sections }}
         <ul>
@@ -39,34 +39,13 @@
 
       </div>
       {{ if $author }}
-      <div class="col-md-4 col-sm-12">
+      <div class="col-md-6 col-sm-12">
         <h5>{{ i18n "contact_me" }}</h5>
         <ul>
           {{ range $key,$value:= $author.contactInfo }}
           <li><span>{{ title $key }}: </span> <span>{{ $value }}</span></li>
           {{ end }}
         </ul>
-      </div>
-      {{ end }}
-      {{ if .Site.Params.newsletter.enable }}
-      <div class="col-md-4 col-sm-12">
-        <!-- <h5>Newsletter</h5> -->
-        <p>{{ i18n "newsletter_text" }}</p>
-        <form>
-          <div class="form-group">
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="{{ i18n "newsletter_input_placeholder" }}"
-            />
-            <small id="emailHelp" class="form-text text-muted"
-              >{{ i18n "newsletter_warning" }}</small
-            >
-          </div>
-          <button type="submit" class="btn btn-info">{{ i18n "submit" }}</button>
-        </form>
       </div>
       {{ end }}
     </div>
