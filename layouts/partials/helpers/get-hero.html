@@ -1,5 +1,5 @@
 {{ $heroImage:= "/assets/images/default-hero.jpg"}}
-{{ if  .Params.hero }}
-    {{ $heroImage = .Params.hero }}
+{{ if  .Page.thumbnail }}
+    {{ $heroImage = .Page.thumbnail }}
 {{ end }}
 {{ return $heroImage }}
