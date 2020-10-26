@@ -15,7 +15,6 @@
 <nav class="navbar navbar-expand-xl top-navbar initial-navbar" id="top-navbar">
   <div class="container">
     <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}">
-      <img src="{{ $invertedLogo | absURL }}" id="logo">
       {{- .Site.Title -}}
     </a>
     <button
@@ -73,5 +72,4 @@
   </div>
   <!-- Store the logo information in a hidden img for the JS -->
   <img src="{{ $mainLogo | absURL }}" class="d-none" id="main-logo">
-  <img src="{{ $invertedLogo | absURL }}" class="d-none" id="inverted-logo">
 </nav>
